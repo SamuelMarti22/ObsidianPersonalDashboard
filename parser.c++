@@ -13,13 +13,13 @@ using namespace std;
 #define CHARSEPARADOR '-'
 
 void limpiarTarea(string& linea) {
-  linea.erase(remove(linea.begin(), linea.end(), '+'), linea.end());
+  linea.erase(remove(linea.begin(), linea.end(), CHARTAREA), linea.end());
   linea.erase(remove(linea.begin(), linea.end(), '['), linea.end());
   linea.erase(remove(linea.begin(), linea.end(), ']'), linea.end());
 }
 
 void limpiarMateria(string& linea) {
-  linea.erase(remove(linea.begin(), linea.end(), '#'), linea.end());
+  linea.erase(remove(linea.begin(), linea.end(), CHARMATERIA), linea.end());
   if (linea.back() == '\n') {
     linea.pop_back();
   }
